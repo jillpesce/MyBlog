@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from about.views import splash
-from post.views import posts
+from post.views import post, blog, splash
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', splash, name='splash'),
-    path('posts/', posts, name='post'),
+    path('post/<str:id>', post, name='post'),
+    path('blog/', blog, name='blog')
 ]

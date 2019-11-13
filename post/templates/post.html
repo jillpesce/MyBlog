@@ -1,4 +1,16 @@
-{% for post in posts %}
-	<p> {{post.title}}: {{post.description}} </p>
-	<p> Author: {{post.author}} </p>
-{% endfor %}
+{% extends 'bulma/base.html' %}
+
+{% block title %}Bulma Site{% endblock %}
+
+{% block content %}
+	<h class="is-uppercase; has-text-weight-bold"> {{post.title | safe}}</h>
+	<br>
+	<img src = {{post.image}}>
+	<br>
+	<p>{{post.description | safe}} </p>
+	<br> 
+	<p> {{post.author | safe}} {{post.date | safe}} </p>
+	<br><br>
+	<a href="http://localhost:8000/blog/">Back to blog</a>
+{% endblock content %}
+
