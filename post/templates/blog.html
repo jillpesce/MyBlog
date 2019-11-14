@@ -1,0 +1,13 @@
+{% extends 'bulma/base.html' %}
+
+{% block content %}
+<h>Blog Posts</h>
+<br>
+{% for post in posts %}
+    <a href="http://localhost:8000/post/{{post.id}}"> {{post.title}}</a>
+    <br>
+{% endfor %}
+<br><br>
+<a href="http://localhost:8000/">Back to home page</a>
+{% endblock content %}
+
