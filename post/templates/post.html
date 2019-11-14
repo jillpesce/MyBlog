@@ -1,11 +1,9 @@
 {% extends 'bulma/base.html' %}
 
-{% block title %}Bulma Site{% endblock %}
-
 {% block content %}
-	<h class="is-uppercase; has-text-weight-bold"> {{post.title | safe}}</h>
+	<h> {{post.title | safe}}</h>
 	<br>
-	<img src = {{post.image}}>
+	<img src = {{post.image}} width="30%" height="30%">
 	<br>
 	<p>{{post.description | safe}} </p>
 	<br> 
